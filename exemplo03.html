@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Page Title</title>
+</head>
+<body>
+    <script>
+        var x = 3;
+        imprime(x);
+
+        var y = quadrado(x);
+        imprime(y);
+
+        var z = quadrado;
+        console.log(typeof z);
+        imprime(z(x));
+
+        var w = function (p)
+        {
+            console.log(x,y,z,w);
+            return p+2;
+        }
+
+        w(5);
+
+        (function(t)
+        {
+            console.log(9*t); 
+        })(10);
+
+        function imprime(p)
+        {
+            console.log(p);
+        }
+
+        function quadrado(n) 
+        {
+            return n*n;    
+        }
+    
+    </script>
+</body>
+</html>
